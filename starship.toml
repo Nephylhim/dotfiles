@@ -1,0 +1,70 @@
+add_newline = true
+
+format = """\
+  $username\
+  $hostname\
+  $time\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $hg_branch\
+  $package\
+  $golang\
+  $nodejs\
+  $python\
+  $ruby\
+  $rust\
+  $conda\
+  $memory_usage\
+  $cmd_duration\
+  $custom\
+  $line_break\
+  $directory\
+  $jobs\
+  $battery\
+  $character\
+  """
+
+[directory]
+truncate_to_repo = false
+truncation_length = 8
+
+[time]
+disabled = false
+format = "[$time]($style) "
+
+[git_status]
+
+untracked = '[N$count](green)'
+stashed = '[\$$count](yellow)'
+modified = '[~$count](blue)'
+staged = '+$count'
+renamed = '»$count'
+deleted = '[X$count](red)'
+show_sync_count = true
+format = '([⟪$all_status$ahead_behind⟫]($style) )'
+style = "bold purple"
+
+[golang]
+disabled = true
+symbol = "🐹"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[package]
+symbol = "📦"
+
+[rust]
+symbol = "🦀"
+
+[nodejs]
+symbol = "⬢"
+
+[python]
+symbol = "🐍"
+
+[ruby]
+symbol = "💎"

@@ -1,0 +1,90 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "simple-icons",
+    "files.autoSave": "onFocusChange",
+    "editor.tabCompletion": "on",
+    "window.menuBarVisibility": "toggle",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.showExpandedAbbreviation": "always",
+    "files.insertFinalNewline": true,
+    "editor.fontSize": 13,
+    "extensions.ignoreRecommendations": false,
+    "window.zoomLevel": 0,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    "zenMode.centerLayout": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "go.autocompleteUnimportedPackages": true,
+    "gitlens.views.repositories.files.layout": "tree",
+    "tslint.configFile": "tslint.json",
+    "editor.matchBrackets": false,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "bracket-pair-colorizer-2.colors": [
+        "Gold",
+        "Orchid",
+        "LightSkyBlue",
+        "Orange"
+    ],
+    "files.watcherExclude": {
+        "**/dist/**": true
+    },
+    "markdownlint.config": {
+        "MD007": {
+            "indent": 1
+        },
+        "MD010": false,
+        "MD012": false,
+        "MD013": false,
+        "MD024": false,
+        "MD036": false
+    },
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "markdown-preview-enhanced.mermaidTheme": "default",
+    "gitlens.mode.active": "review",
+    "terminal.integrated.fontFamily": "DroidSansMono Nerd Font, Book",
+    "markdown.extension.italic.indicator": "_",
+    "markdown.extension.list.indentationSize": "inherit",
+    "editor.formatOnSave": true,
+    "flow.useNPMPackagedFlow": true,
+    "javascript.validate.enable": false,
+    "javascript.format.enable": false,
+    "eslint.autoFixOnSave": true,
+    // "javascript.format"
+    "prettier.jsxBracketSameLine": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "eslint.packageManager": "yarn",
+    "zenMode.hideLineNumbers": false,
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "shellcheck.enableQuickFix": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            // "icon": "check",
+            "type": "text-and-comment",
+            // "rulerColour": "#ffab00",
+            "borderRadius": "1px solid",
+            "foreground": "white",
+            "background": "#ffab00"
+        },
+        "FIXME": {
+            // "icon": "check",
+            "type": "text-and-comment",
+            // "rulerColour": "#ffab00",
+            "borderRadius": "1px solid",
+            "foreground": "white",
+            "background": "#fe4f4f"
+        },
+    },
+    "go.installDependenciesWhenBuilding": false,
+    "go.gocodeAutoBuild": true,
+    // "prettier.configPath": ".eslint",
+}

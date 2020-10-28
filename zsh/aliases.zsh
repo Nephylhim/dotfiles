@@ -25,6 +25,8 @@ alias calc='eva'
 alias b='bat'
 alias cat='bat -p'
 alias gd='git delta'
+alias rm='echo "use rip!"; rip'
+alias truerm='/bin/rm'
 
 alias pingue='ping 9.9.9.9'
 alias dodo='systemctl suspend'
