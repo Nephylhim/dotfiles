@@ -46,3 +46,5 @@ alias cheat='cht.sh'
 alias tchoutchou='sl -el'
 alias loadkeys='setxkbmap'
 alias w='which'
+alias sudo='sudo ' # irc, to keep autocompletion when using sudo
+alias dl='rsync -rvPe ssh'
