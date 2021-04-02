@@ -42,7 +42,7 @@
         "MD024": false,
         "MD036": false
     },
-    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown-preview-enhanced.mermaidTheme": "default",
     "gitlens.mode.active": "review",
     "terminal.integrated.fontFamily": "DroidSansMono Nerd Font, Book",
@@ -86,5 +86,6 @@
     },
     "go.installDependenciesWhenBuilding": false,
     "go.gocodeAutoBuild": true,
+    "tabnine.experimentalAutoImports": true,
     // "prettier.configPath": ".eslint",
 }
