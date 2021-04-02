@@ -21,9 +21,11 @@
     delta = !git diff | delta
     stashdiff = !git stash show -p | delta
     sd = !git stash show -p | delta
-    unstage = reset HEAD
     chuck = !git commit -am \"$(curl -s \"https://api.icndb.com/jokes/random?escape=javascript\" | jq -r \".value.joke\")\"
-        #chuck = !bash -c \"git commit -am \\\"$(curl -s \"https://api.icndb.com/jokes/random?escape=javascript\" | jq -r \".value.joke\")\\\"\"
+    #chuck = !bash -c \"git commit -am \\\"$(curl -s \"https://api.icndb.com/jokes/random?escape=javascript\" | jq -r \".value.joke\")\\\"\"
+    #unstage = reset HEAD
+    unstage = reset HEAD --
+    showd = !git show $1 | delta
 
 [delta]
     number = true
