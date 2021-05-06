@@ -13,7 +13,6 @@
     "files.insertFinalNewline": true,
     "editor.fontSize": 13,
     "extensions.ignoreRecommendations": false,
-    "window.zoomLevel": 0,
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
     "zenMode.centerLayout": false,
@@ -87,5 +86,19 @@
     "go.installDependenciesWhenBuilding": false,
     "go.gocodeAutoBuild": true,
     "tabnine.experimentalAutoImports": true,
+    "go.addTags": {
+        "transform": "camelcase"
+    },
+    "gopls": {
+        "build.expandWorkspaceToModule": false,
+        // "build.buildFlags": [
+        //     "-tags"
+        // ],
+        "build.allowModfileModifications": true,
+        // "formatting.gofumpt": true,
+        "formatting.local": "diateam.net"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "go.formatTool": "goimports",
     // "prettier.configPath": ".eslint",
 }

@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 PATH=$PATH:/sbin:/usr/sbin:$HOME/go/bin:/usr/local/go/bin:$HOME/gittools:$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -75,8 +76,12 @@ export ZSH=$HOME/.oh-my-zsh
 #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=6
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6,underline'
 ZSH_COLORIZE_STYLE="fruity"
-plugins=(git git-auto-fetch common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm)
-# old plugings = (nvm golang)
+
+NVM_LAZY=1
+#NVM_AUTOLOAD=1
+
+plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm)
+# old plugings = (golang)
 
 # TODO: add chucknorris plugin (need to install another package)
 
@@ -110,3 +115,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
