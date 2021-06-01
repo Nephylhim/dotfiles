@@ -2,7 +2,7 @@
 
 zshrc = "~/.zshrc"
 "zsh/aliases.zsh" = "~/.oh-my-zsh/custom/aliases.zsh"
-"zsh/conf.zsh" = "~/.oh-my-zsh/custom/conf.zsh"
+"zsh/tools.zsh" = "~/.oh-my-zsh/custom/tools.zsh"
 "zsh/debian.zsh" = "~/.oh-my-zsh/custom/debian.zsh"
 "zsh/go.zsh" = "~/.oh-my-zsh/custom/go.zsh"
 "zsh/motd.zsh" = "~/.oh-my-zsh/custom/motd.zsh"
