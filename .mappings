@@ -13,3 +13,6 @@ gitconfig = "~/.config/git/config"
 
 "vscode/keybindings.json" = "~/.config/Code/User/keybindings.json"
 "vscode/settings.json" = "~/.config/Code/User/settings.json"
+
+vimrc = "~/.vimrc"
+vim = "~/.vim"
