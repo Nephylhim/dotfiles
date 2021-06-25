@@ -80,7 +80,7 @@ ZSH_COLORIZE_STYLE="fruity"
 NVM_LAZY=1
 #NVM_AUTOLOAD=1
 
-plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm)
+plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm zoxide)
 # old plugings = (golang)
 
 # TODO: add chucknorris plugin (need to install another package)

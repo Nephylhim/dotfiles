@@ -24,3 +24,8 @@ test -d $HOME/opt/gotoFonction/ && alias gt='goto'
 
 test -d $HOME/opt/OmniCLI/ && source "/home/thomas/opt/OmniCLI/omnicli.sh"
 test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"
+
+# zsh-autocomplete - Real-time type-ahead completion for Zsh
+# https://github.com/marlonrichert/zsh-autocomplete
+test -d $HOME/opt/zsh-autocomplete && source "$HOME/opt/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+
