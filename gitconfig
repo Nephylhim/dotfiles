@@ -16,6 +16,7 @@
     troll = !git commit -m \"cf commit $(git log --format=format:%H | shuf | head -n1)\"
     stat = diff --stat
     ld = diff HEAD~1
+    ldd = !git diff HEAD~1 | delta
     bvv = branch -vv
     putsch = push --force
     delta = !git diff | delta

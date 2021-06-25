@@ -90,7 +90,7 @@
         "transform": "camelcase"
     },
     "gopls": {
-        "build.expandWorkspaceToModule": false,
+        // "build.expandWorkspaceToModule": false,
         // "build.buildFlags": [
         //     "-tags"
         // ],
@@ -100,5 +100,11 @@
     },
     "go.toolsManagement.autoUpdate": true,
     "go.formatTool": "goimports",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "files.associations": {
+        "*.rb.mu": "ruby"
+    },
     // "prettier.configPath": ".eslint",
 }
