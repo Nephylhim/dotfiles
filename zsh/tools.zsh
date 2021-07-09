@@ -8,11 +8,11 @@ export ASAN_OPTIONS=new_delete_type_mismatch=0
 # starship
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 
-# thefuck - fuck command
-command -v thefuck &>/dev/null && eval $(thefuck --alias)
-
 # linuxbrew - Homebrew for linux
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# thefuck - fuck command
+command -v thefuck &>/dev/null && eval $(thefuck --alias)
 
 # navi - An interactive cheatsheet tool for the command-line.
 # https://github.com/denisidoro/navi
@@ -27,5 +27,5 @@ test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"
 
 # zsh-autocomplete - Real-time type-ahead completion for Zsh
 # https://github.com/marlonrichert/zsh-autocomplete
-test -d $HOME/opt/zsh-autocomplete && source "$HOME/opt/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+#test -d $HOME/opt/zsh-autocomplete && source "$HOME/opt/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
