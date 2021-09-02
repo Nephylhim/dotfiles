@@ -29,3 +29,7 @@ test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"
 # https://github.com/marlonrichert/zsh-autocomplete
 #test -d $HOME/opt/zsh-autocomplete && source "$HOME/opt/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
+# atuin - Magical shell history
+# https://github.com/ellie/atuin
+command -v atuin &>/dev/null && eval "$(atuin init zsh)"
+

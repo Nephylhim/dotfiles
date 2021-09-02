@@ -6,6 +6,7 @@ zshrc = "~/.zshrc"
 "zsh/debian.zsh" = "~/.oh-my-zsh/custom/debian.zsh"
 "zsh/go.zsh" = "~/.oh-my-zsh/custom/go.zsh"
 "zsh/motd.zsh" = "~/.oh-my-zsh/custom/motd.zsh"
+"zsh/workflows.zsh" = "~/.oh-my-zsh/custom/workflows.zsh"
 
 "starship.toml" = "~/.config/starship.toml"
 

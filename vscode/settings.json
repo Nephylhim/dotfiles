@@ -101,10 +101,14 @@
     "go.toolsManagement.autoUpdate": true,
     "go.formatTool": "goimports",
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter-notebook"
     },
     "files.associations": {
         "*.rb.mu": "ruby"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
     },
     // "prettier.configPath": ".eslint",
 }
