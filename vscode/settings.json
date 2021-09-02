@@ -110,5 +110,8 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
     // "prettier.configPath": ".eslint",
 }
