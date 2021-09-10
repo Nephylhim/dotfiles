@@ -17,3 +17,5 @@ gitconfig = "~/.config/git/config"
 
 vimrc = "~/.vimrc"
 vim = "~/.vim"
+
+"atuin_config.toml" = "~/.config/atuin/config.toml"
