@@ -54,6 +54,7 @@ alias skf="rg --files | sk --preview 'bat {} --color=always'"
 #       {1}                 filename
 #   '
 alias skl="sk --ansi --delimiter ':' -i -c 'rg --color=always --line-number "'"{}"'"' --preview 'bat --pager=never -r "'"$(echo "$(bc <<< {2}-15)\n1" | sort -nr | head -n1):"'" -H {2} --color=always --number {1}'"
+alias preview='sk --preview="bat {} --color=always"'
 
 alias fd='/usr/bin/fdfind'
 alias calc='eva'
