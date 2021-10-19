@@ -63,6 +63,7 @@ alias cat='bat -p'
 alias truecat='/bin/cat'
 alias tcat='/bin/cat'
 alias gd='git delta'
+alias glg='git lg'
 alias rm='echo "use rip!"; rip'
 alias truerm='/bin/rm'
 
