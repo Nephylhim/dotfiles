@@ -124,5 +124,22 @@
     ],
     "liveshare.guestApprovalRequired": true,
     "puppet.editorService.enable": false,
+    "gitlab.ignoreCertificateErrors": true,
+    "gitlab.ca": "/etc/ssl/certs/b1a6a685.1",
+    "gitlab.cert": "/etc/ssl/certs/b1a6a685.1",
     // "prettier.configPath": ".eslint",
+    "gitlab.remoteName": "origin",
+    "gitlab.pipelineGitRemoteName": "origin",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
 }

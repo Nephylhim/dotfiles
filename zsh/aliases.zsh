@@ -79,6 +79,8 @@ alias plz='please $(history | tail -n1 | cut -c 8-)'
 alias shardis='/usr/bin/python -m SimpleHTTPServer'
 alias cl='clear'
 alias c='code .'
+#alias cg='code -rg'
+function cg(){code -rg "$(sed -r 's|:$||'<<<"$1")"}
 alias h='history | less'
 alias n='nautilus . &'
 alias cht='cht.sh'

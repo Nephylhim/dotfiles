@@ -4,6 +4,7 @@
     #pd = !git push -u fork "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`:dev/`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
     pd = !git push -u fork "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
     #pushdev = !git push fork
+    pdo = !git push --set-upstream origin "`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`:tco/`git branch --no-color 2>/dev/null | grep '*' | sed -e 's/\\* //'`"
     shit = !git add . && git commit -m
     #setremote = !git remote add fork "`git remote get-url origin | sed -re 's|^(.*):(.*)/(.*)\\.git$|\\1:tcoussot/\\2-\\3.git|'`"
     setremote = !git remote add fork "`git remote get-url origin | sed -re 's|^(.*):(hns-platform/)?([\\w-]+/)?(.*git)$|\\1:tcoussot/\\3\\4|' | sed -re 's|(.*tcoussot)/((.+)/)(.+git)|\\1/\\3-\\4|'`" && git remote get-url fork
