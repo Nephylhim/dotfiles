@@ -11,7 +11,7 @@
     },
     "emmet.showExpandedAbbreviation": "always",
     "files.insertFinalNewline": true,
-    "editor.fontSize": 13,
+    "editor.fontSize": 12,
     "extensions.ignoreRecommendations": false,
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
@@ -20,7 +20,7 @@
     "go.autocompleteUnimportedPackages": true,
     "gitlens.views.repositories.files.layout": "tree",
     "tslint.configFile": "tslint.json",
-    "editor.matchBrackets": false,
+    // "editor.matchBrackets": false,
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "bracket-pair-colorizer-2.colors": [
         "Gold",
@@ -51,7 +51,7 @@
     "flow.useNPMPackagedFlow": true,
     "javascript.validate.enable": false,
     "javascript.format.enable": false,
-    "eslint.autoFixOnSave": true,
+    // "eslint.autoFixOnSave": true,
     // "javascript.format"
     "prettier.jsxBracketSameLine": true,
     "prettier.semi": false,
@@ -71,7 +71,7 @@
             "type": "text-and-comment",
             // "rulerColour": "#ffab00",
             "borderRadius": "1px solid",
-            "foreground": "white",
+            "foreground": "#fff",
             "background": "#ffab00"
         },
         "FIXME": {
@@ -79,7 +79,7 @@
             "type": "text-and-comment",
             // "rulerColour": "#ffab00",
             "borderRadius": "1px solid",
-            "foreground": "white",
+            "foreground": "#fff",
             "background": "#fe4f4f"
         },
     },
@@ -100,6 +100,10 @@
     },
     "go.toolsManagement.autoUpdate": true,
     "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -141,5 +145,8 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 }

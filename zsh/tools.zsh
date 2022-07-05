@@ -1,4 +1,3 @@
-export EDITOR='vim'
 export ASAN_OPTIONS=new_delete_type_mismatch=0
 #export PAGER='bat -p'
 #export BAT_PAGER='bat'
@@ -33,4 +32,3 @@ test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"
 # atuin - Magical shell history
 # https://github.com/ellie/atuin
 command -v atuin &>/dev/null && eval "$(atuin init zsh)"
-

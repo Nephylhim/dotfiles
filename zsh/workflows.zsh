@@ -1,4 +1,4 @@
-function glmr() {
+function glmr-old() {
 	mrId="$(glab mr list | sk | cut -f1)"
 
 	read -r -d '' actions <<-EOM
@@ -28,4 +28,15 @@ function glmr() {
 		read -s -n 1
 	done
 
+}
+
+function glmr() {
+	sk \
+		--no-sort \
+		-c 'glab mr list -P 1000' \
+		--header-lines=2 \
+		--header='alt-d: diff | alt-c: checkout | alt-v: view w/ comments | alt-a: approve MR | ctrl-p: toggle preview' \
+		--bind 'alt-d:execute(glab mr diff {1} | delta),alt-c:execute(glab mr checkout {1}),alt-v:execute(glab mr view --comments --system-logs -P 1000 {1}),alt-a:execute(glab mr approve {1}),ctrl-p:toggle-preview' \
+		--preview 'script /dev/null -qfec "PAGER=''; glab mr view {1}"' \
+		$*
 }

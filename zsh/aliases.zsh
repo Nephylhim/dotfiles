@@ -9,6 +9,29 @@ function timezsh() {
     cat /tmp/timezsh
 }
 
+# https://serverfault.com/questions/3743/what-useful-things-can-one-add-to-ones-bashrc
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1    ;;
+            *.tar.gz)    tar xvzf $1    ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xvf $1     ;;
+            *.tbz2)      tar xvjf $1    ;;
+            *.tgz)       tar xvzf $1    ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)           echo "don't know how to extract '$1'..." ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+
 alias status='systemctl status'
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
@@ -67,13 +90,17 @@ alias glg='git lg'
 alias rm='echo "use rip!"; rip'
 alias truerm='/bin/rm'
 
-alias pingue='ping 9.9.9.9'
-alias dodo='systemctl suspend'
-alias grododo='shutdown now'
 alias resource='clear; exec zsh'
 alias rrsc='clear; exec zsh'
 alias zshrc='vim ~/.zshrc; clear; exec zsh'
+alias aliasrc="$EDITOR ~/.dotfiles/zsh/aliases.zsh; exec zsh"
+alias gitconfig="$EDITOR ~/.config/git/config"
+alias gitrc="$EDITOR ~/.config/git/config"
+
 alias please='sudo'
+alias pingue='ping 9.9.9.9'
+alias dodo='systemctl suspend'
+alias grododo='shutdown now'
 alias osef='please $(history | tail -n1 | cut -c 8-)'
 alias plz='please $(history | tail -n1 | cut -c 8-)'
 alias shardis='/usr/bin/python -m SimpleHTTPServer'
