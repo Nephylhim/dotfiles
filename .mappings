@@ -19,3 +19,5 @@ vimrc = "~/.vimrc"
 vim = "~/.vim"
 
 "atuin_config.toml" = "~/.config/atuin/config.toml"
+
+"topgrade.toml" = "~/.config/topgrade.toml"
