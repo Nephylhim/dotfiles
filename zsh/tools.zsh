@@ -31,4 +31,13 @@ test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"
 
 # atuin - Magical shell history
 # https://github.com/ellie/atuin
-command -v atuin &>/dev/null && eval "$(atuin init zsh)"
+if command -v atuin &>/dev/null; then
+    # Prevent the up arrow rebind
+    export ATUIN_NOBIND="true"
+    eval "$(atuin init zsh)"
+    bindkey '^r' _atuin_search_widget
+
+    # depends on terminal mode - up arrow
+    #bindkey '^[[A' _atuin_search_widget
+    #bindkey '^[OA' _atuin_search_widget
+fi
