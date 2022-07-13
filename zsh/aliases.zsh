@@ -31,6 +31,19 @@ extract () {
     fi
 }
 
+newbashscript() {
+    if [ $# -eq 0 ]; then
+        echo "$0 needs an argument to work" >&2
+        echo "usage: $0 <fileName>"
+        return 1
+    fi
+    if [ ! -f $HOME/.dotfiles/rsc/full-cli.sh ]; then
+        echo "cannot find template" >&2
+        return 1
+    fi
+
+    cp $HOME/.dotfiles/rsc/full-cli.sh $1
+}
 
 alias status='systemctl status'
 alias start='sudo systemctl start'
