@@ -60,7 +60,8 @@ fi
 
 # TODO: add chucknorris plugin (need to install another package)
 
-export EDITOR='vim'
+#export EDITOR='vim'
+export EDITOR='micro'
 
 source $ZSH/oh-my-zsh.sh
 

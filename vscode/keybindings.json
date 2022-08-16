@@ -54,11 +54,19 @@
         "command": "workbench.action.focusLeftGroup"
     },
     {
+        "key": "alt+left",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
         "key": "ctrl+k ctrl+left",
         "command": "-workbench.action.focusLeftGroup"
     },
     {
         "key": "ctrl+k ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "alt+right",
         "command": "workbench.action.focusRightGroup"
     },
     {

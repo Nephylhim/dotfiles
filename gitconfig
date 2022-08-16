@@ -13,10 +13,12 @@
     fixp = !git commit --all --amend --no-edit && git push -f
     bump = !git add . && git commit -m 'bump dependencies'
     undo = !git reset --soft HEAD^
-    vomit = !git commit -m \"$(head /dev/urandom -c32)\"
+    #vomit = !git commit -m \"$(head /dev/urandom -c32)\"
+    vomit = !head /dev/urandom | tr "\\0" 0 | git commit --file=-
     lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lgb = log --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
-    fuck = !sh -c \"git commit -m '$(curl -s http://whatthecommit.com/index.txt)'\"
+    #fuck = !sh -c \"git commit -m '$(curl -s http://whatthecommit.com/index.txt)'\"
+    fuck = !curl -s http://whatthecommit.com/index.txt | git commit --file=-
     troll = !git commit -m \"cf commit $(git log --format=format:%H | shuf | head -n1)\"
     stat = diff --stat
     ld = diff HEAD~1

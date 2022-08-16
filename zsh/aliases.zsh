@@ -105,10 +105,14 @@ alias truerm='/bin/rm'
 
 alias resource='clear; exec zsh'
 alias rrsc='clear; exec zsh'
-alias zshrc='vim ~/.zshrc; clear; exec zsh'
+alias zshrc="$EDITOR ~/.zshrc; clear; exec zsh"
 alias aliasrc="$EDITOR ~/.dotfiles/zsh/aliases.zsh; exec zsh"
 alias gitconfig="$EDITOR ~/.config/git/config"
 alias gitrc="$EDITOR ~/.config/git/config"
+alias c='code .'
+#alias cg='code -rg'
+function cg(){code -rg "$(sed -r 's|:$||'<<<"$1")"}
+alias e="$EDITOR"
 
 alias please='sudo'
 alias pingue='ping 9.9.9.9'
@@ -118,9 +122,6 @@ alias osef='please $(history | tail -n1 | cut -c 8-)'
 alias plz='please $(history | tail -n1 | cut -c 8-)'
 alias shardis='/usr/bin/python -m SimpleHTTPServer'
 alias cl='clear'
-alias c='code .'
-#alias cg='code -rg'
-function cg(){code -rg "$(sed -r 's|:$||'<<<"$1")"}
 alias h='history | less'
 alias n='nautilus . &'
 alias cht='cht.sh'
