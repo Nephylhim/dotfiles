@@ -92,6 +92,8 @@ alias skf="rg --files | sk --preview 'bat {} --color=always'"
 alias skl="sk --ansi --delimiter ':' -i -c 'rg --color=always --line-number "'"{}"'"' --preview 'bat --pager=never -r "'"$(echo "$(bc <<< {2}-15)\n1" | sort -nr | head -n1):"'" -H {2} --color=always --number {1}'"
 alias preview='sk --preview="bat {} --color=always"'
 
+alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | sk) --no-sandbox'
+
 alias fd='/usr/bin/fdfind'
 alias calc='eva'
 alias b='bat'

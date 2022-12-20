@@ -49,7 +49,8 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6,underline'
 ZSH_COLORIZE_STYLE="fruity"
 
-NVM_LAZY=1
+zstyle ':omz:plugins:nvm' lazy true
+# NVM_LAZY=1
 #NVM_AUTOLOAD=1
 
 plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm zoxide)
