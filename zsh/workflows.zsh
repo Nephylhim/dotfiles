@@ -40,3 +40,41 @@ function glmr() {
 		--preview 'script /dev/null -qfec "PAGER=''; glab mr view {1}"' \
 		$*
 }
+
+function createDesktopEntry() {
+	help="Usage:\n $0 <execPath> <appName>"
+	if [[ $# == 0 ]]; then
+		echo -e "need 1-2 arguments. $help\nexiting..."
+		return 1
+	fi
+
+	if [ ! -f $1 ]; then
+		echo -e "exec $1 not found. $help\nexiting..."
+		return 1
+	fi
+
+	name=$2
+	if [ ! -z $2 ]; then
+		name="$(basename "$1")"
+	fi
+
+	path="$HOME"/.local/share/applications/"$name".desktop
+	if [ -f $path ]; then
+		echo -e "desktop entry $path already exists. $help\nexiting..."
+		return 1
+	fi
+
+	echo "creating entry"
+
+	\cat >"$path" <<-EOM
+		    [Desktop Entry]
+		    Type=Application
+		    Name=$name
+		    Exec="$1"
+		    #Icon=$HOME/...
+		    Categories=Application;
+	EOM
+
+	$EDITOR $path
+	return 0
+}

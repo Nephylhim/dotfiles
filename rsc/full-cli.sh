@@ -162,8 +162,37 @@ _main() {
 
 	# Config defaults
 	# ____________________________________
-	# [[ $var == "" ]] && var="$(jq -r '.var' "$scriptDir/$configFile")"
-	# [[ ${#vars[@]} == 0 ]] && readarray -t vars <<<"$(jq -r '.vars[]' "$scriptDir/$configFile")"
+
+	# Finding the config file if the path is relative
+	if [ ! -f "$configFile" ]; then
+		ldebug "config file not found, trying script directory"
+		configFile="$(
+			cd "$scriptDir"
+			realpath "$configFile"
+		)"
+		ldebug "config file: '$configFile'"
+	fi
+	configFile=$(realpath "$configFile")
+
+	# optionnal. exit if no config file found
+	# if [[ ! -f "$configFile" ]]; then
+	# 	lfail "Config file not found, exiting"
+	# 	exit 1
+	# fi
+
+	# setting defaults from config file
+	# if [ -f "$configFile" ]; then
+	# 	[[ $var == "" ]] && var="$(jq -r '.var' "$configFile")"
+	# 	[[ ${#vars[@]} == 0 ]] && readarray -t vars <<<"$(jq -r '.vars[]' "$configFile")"
+	# else
+	# 	ldebug "config file not found"
+	# fi
+
+	ldebug "scriptDir: $scriptDir"
+	ldebug "configFile: $configFile"
+	ldebug "dryRun: $dryRun\n"
+	ldebug "args: ${args[*]}\n"
+	ldebug "blacklist: ${blacklist[*]}\n"
 
 	# Verify mandatory vars
 	# ____________________________________
@@ -178,18 +207,6 @@ _main() {
 	#     _help
 	#     exit 1
 	# fi
-
-	configFile=$(realpath "$configFile")
-	if [[ ! -f "$configFile" ]]; then
-		lfail "Config file not found, exiting"
-		exit 1
-	fi
-
-	ldebug "scriptDir: $scriptDir"
-	ldebug "configFile: $configFile"
-	ldebug "dryRun: $dryRun\n"
-	ldebug "args: ${args[*]}\n"
-	ldebug "blacklist: ${blacklist[*]}\n"
 
 	_mainWorklow
 }

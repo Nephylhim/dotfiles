@@ -18,9 +18,10 @@ command -v thefuck &>/dev/null && eval $(thefuck --alias)
 command -v navi &>/dev/null && eval "$(navi widget zsh)"
 
 # Own tools
+export GOTO_FALLBACK='z'
 test -d $HOME/opt/gotoFonction/ && source "$HOME/opt/gotoFonction/gotoFct.sh"
 test -d $HOME/opt/gotoFonction/ && alias gt='goto'
-test -d $HOME/opt/gotoFonction/ && alias gtedit='vim ~/.gotoFct'
+test -d $HOME/opt/gotoFonction/ && alias gtrc='vim ~/.gotoFct'
 
 test -d $HOME/opt/OmniCLI/ && source "/home/thomas/opt/OmniCLI/omnicli.sh"
 test -d $HOME/opt/OmniCLI/ && alias oc="omnicli"

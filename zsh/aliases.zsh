@@ -1,3 +1,5 @@
+export ALIASRC="$ZSH/custom/aliases.zsh"
+
 function md() {
     mkdir "$1"
     cd "$1" || return
@@ -93,6 +95,7 @@ alias skl="sk --ansi --delimiter ':' -i -c 'rg --color=always --line-number "'"{
 alias preview='sk --preview="bat {} --color=always"'
 
 alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | sk) --no-sandbox'
+command -v scrcpy >/dev/null && alias sc='scrcpy -S --disable-screensaver -m 800'
 
 alias fd='/usr/bin/fdfind'
 alias calc='eva'
@@ -135,3 +138,6 @@ alias sudo='sudo ' # iirc, to keep autocompletion when using sudo
 alias dl='rsync -HavPze ssh'
 alias f='fuck'
 alias path="echo $PATH | sed 's/:/\n/g'"
+alias sshx='ssh -X'
+alias sshrc="$EDITOR ~/.ssh/config"
+alias cx='chmod u+x'
