@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Bearded Theme Arc EolStorm",
     "workbench.iconTheme": "simple-icons",
     "files.autoSave": "onFocusChange",
     "editor.tabCompletion": "on",
@@ -53,7 +53,7 @@
     "javascript.format.enable": false,
     // "eslint.autoFixOnSave": true,
     // "javascript.format"
-    "prettier.jsxBracketSameLine": true,
+    "prettier.bracketSameLine": true,
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
