@@ -13,11 +13,11 @@
     "files.insertFinalNewline": true,
     "editor.fontSize": 12,
     "extensions.ignoreRecommendations": false,
-    "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    // "go.useCodeSnippetsOnFunctionSuggest": true,
+    // "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    // "go.autocompleteUnimportedPackages": true,
     "zenMode.centerLayout": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "go.autocompleteUnimportedPackages": true,
     "gitlens.views.repositories.files.layout": "tree",
     "tslint.configFile": "tslint.json",
     // "editor.matchBrackets": false,
@@ -57,13 +57,13 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "all",
-    "eslint.packageManager": "yarn",
+    // "eslint.packageManager": "yarn",
     "zenMode.hideLineNumbers": false,
     "todo-tree.tree.showScanModeButton": false,
     "editor.acceptSuggestionOnEnter": "off",
     "shellcheck.enableQuickFix": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "todo-tree.highlights.customHighlight": {
         "TODO": {
@@ -84,7 +84,7 @@
         },
     },
     "go.installDependenciesWhenBuilding": false,
-    "go.gocodeAutoBuild": true,
+    // "go.gocodeAutoBuild": true,
     "tabnine.experimentalAutoImports": true,
     "go.addTags": {
         "transform": "camelcase"
@@ -149,4 +149,13 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "prettier.tabWidth": 4,
+    "gitlens.graph.layout": "editor",
+    "shellformat.flag": "-i 4 -ci",
 }

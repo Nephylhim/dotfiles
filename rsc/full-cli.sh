@@ -43,6 +43,11 @@ edry() { echo -e "[${YELLOW}DRY ${NC}] $*"; }
 # ────────────────────────────────────────────────────────────────────────────────
 # Controllers
 
+cleanup() {
+    true
+}
+trap cleanup 0
+
 # TODO: help
 _help() {
 	cat <<EOF

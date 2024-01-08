@@ -40,3 +40,8 @@
     side-by-side = true
     navigate = true
     #hyperlinks = true
+
+[fetch]
+    prune = true
+    pruntTags = true
+

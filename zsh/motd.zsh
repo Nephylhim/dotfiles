@@ -41,9 +41,9 @@ doge+="                \e[1;93m\e[7m▀▄▒▒▒▒▒▒▒▒▒▒▄▄�
 doge+="                  \e[1;93m\e[7m▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀\e[0m\n"
 #echo -e "$doge"
 
-if command -v neofetch >/dev/null && [ -f ~/.dotfiles/doge.txt ]; then
-    neofetch --ascii ~/.dotfiles/doge.txt
-else
-    echo -e "$doge"
-fi
-
+# if command -v neofetch >/dev/null && [ -f ~/.dotfiles/doge.txt ]; then
+#     neofetch --ascii ~/.dotfiles/doge.txt
+# else
+#     echo -e "$doge"
+# fi
+echo -e "$doge"

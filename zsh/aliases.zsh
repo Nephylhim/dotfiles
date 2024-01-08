@@ -57,6 +57,7 @@ alias ll='exa -laF --git'
 alias l='exa -lF --git --color=always'
 alias lt='exa -TlF --git'
 alias lf='exa -lF --git --color=always -s date -r | head -n10' # last 10 files
+alias llf='exa -s date -r | head -n1'
 
 alias t2='tree -L 2'
 alias t3='tree -L 3'
@@ -64,6 +65,8 @@ alias t3='tree -L 3'
 alias -g B='| bat'
 alias -g B1='2>&1 | bat'
 alias -g S='| sk'
+alias -g X='| xargs -- '
+alias -g XI='| xargs -I{} -- '
 
 # Skim
 alias skf="rg --files | sk --preview 'bat {} --color=always'"
@@ -94,15 +97,15 @@ alias skf="rg --files | sk --preview 'bat {} --color=always'"
 alias skl="sk --ansi --delimiter ':' -i -c 'rg --color=always --line-number "'"{}"'"' --preview 'bat --pager=never -r "'"$(echo "$(bc <<< {2}-15)\n1" | sort -nr | head -n1):"'" -H {2} --color=always --number {1}'"
 alias preview='sk --preview="bat {} --color=always"'
 
-alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | sk) --no-sandbox'
-command -v scrcpy >/dev/null && alias sc='scrcpy -S --disable-screensaver -m 800'
+alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | tac | sk) --no-sandbox'
+command -v scrcpy >/dev/null && alias sc='scrcpy -S --disable-screensaver -m 800 -w'
+command -v scrcpy >/dev/null && alias scm='scrcpy -S --disable-screensaver -w -m'
+[ -f $HOME/.local/share/applications/scrcpy.desktop ] && alias sce="$EDITOR $HOME/.local/share/applications/scrcpy.desktop"
 
 alias fd='/usr/bin/fdfind'
 alias calc='eva'
 alias b='bat'
 alias cat='bat -p'
-alias truecat='/bin/cat'
-alias tcat='/bin/cat'
 alias gd='git delta'
 alias glg='git lg'
 alias rm='echo "use rip!"; rip'
@@ -125,7 +128,8 @@ alias dodo='systemctl suspend'
 alias grododo='shutdown now'
 alias osef='please $(history | tail -n1 | cut -c 8-)'
 alias plz='please $(history | tail -n1 | cut -c 8-)'
-alias shardis='/usr/bin/python -m SimpleHTTPServer'
+#alias shardis='/usr/bin/python -m SimpleHTTPServer'
+alias shardis='python2.7 -m SimpleHTTPServer 4200'
 alias cl='clear'
 alias h='history | less'
 alias n='nautilus . &'
@@ -140,4 +144,7 @@ alias f='fuck'
 alias path="echo $PATH | sed 's/:/\n/g'"
 alias sshx='ssh -X'
 alias sshrc="$EDITOR ~/.ssh/config"
+alias kh='kitten ssh'
 alias cx='chmod u+x'
+alias llfi='exa -s date -r | head -n1 | xargs -I{} -- sudo dpkg -i {}'
+alias llfmv='exa -s date -r | head -n1 | xargs -I{} -- mv {}'

@@ -78,3 +78,10 @@ function createDesktopEntry() {
 	$EDITOR $path
 	return 0
 }
+
+function renameKittyWindow() {
+    name=${1:=$(basename $PWD)}
+    kitty @ set-tab-title $name
+}
+alias rename='renameKittyWindow'
+alias ren='renameKittyWindow'

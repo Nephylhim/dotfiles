@@ -5,7 +5,7 @@ export ASAN_OPTIONS=new_delete_type_mismatch=0
 #export SKIM_DEFAULT_COMMAND='rg --color=always --line-numer "{}"'
 
 # starship
-command -v starship &>/dev/null && eval "$(starship init zsh)"
+#command -v starship &>/dev/null && eval "$(starship init zsh)"
 
 # linuxbrew - Homebrew for linux
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -42,3 +42,6 @@ if command -v atuin &>/dev/null; then
     #bindkey '^[[A' _atuin_search_widget
     #bindkey '^[OA' _atuin_search_widget
 fi
+
+# ctrl+backspace > delete word
+bindkey '^H' backward-delete-word
