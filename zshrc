@@ -6,7 +6,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #export TERM="xterm-256color"
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-    source /etc/profile.d/vte.sh
+    [ -f /etc/profile.d/vte.sh ] && source /etc/profile.d/vte.sh
 fi
 
 # Path to your oh-my-zsh installation.
