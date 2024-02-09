@@ -31,7 +31,7 @@ function glmr-old() {
 }
 
 function glmr() {
-	sk \
+	fzf \
 		--no-sort \
 		-c 'glab mr list -P 1000' \
 		--header-lines=2 \
