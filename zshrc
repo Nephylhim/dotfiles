@@ -1,5 +1,5 @@
 # TODO: comment following line again when profiling is done
-zmodload zsh/zprof
+# zmodload zsh/zprof
 PATH=$PATH:/sbin:/usr/sbin:$HOME/go/bin:/usr/local/go/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -59,3 +59,4 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+

@@ -13,12 +13,14 @@ set fileencoding=utf-8
 set termencoding=utf-8
 
 " Indentation
-set expandtab       "Tabs to spaces
+"set expandtab       "Tabs to spaces
+"set noexpandtab     "Use tabs as tabs (and not spaces)
 set smarttab
 set shiftwidth=4
 set softtabstop=4
 set linebreak
 set autoindent
+set listchars=tab:▷▷⋮  "list tabs as ▷▷⋮ in list mode
 
 " Better indent
 vmap > >gv
