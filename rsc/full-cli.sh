@@ -28,7 +28,7 @@ lwarn() { echo -e "[${YELLOW}WARN${NC}] $*"; }
 lok() { echo -e "[${GREEN} OK ${NC}] $*"; }
 ldebug() {
 	if $debug; then
-		echo -e "[${YELLOW}DEBU${NC}]${YELLOW} $*${NC}"
+	    echo -e "[${YELLOW}DEBU${NC}]${YELLOW} $*${NC}" >"$(tty)"
 	fi
 }
 einfo() { echo -e "${BLUE}$*${NC}"; }
@@ -39,6 +39,25 @@ edry() { echo -e "[${YELLOW}DRY ${NC}] $*"; }
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Utils functions
+
+loadConfigVar() {
+    varName=$1
+    jsonPath=${2:-$1}
+
+    val="$(jq -r ".$jsonPath" "$configFile")"
+    eval "$varName"="$val"
+}
+
+loadDefaultConfigVar() {
+    varName=$1
+    jsonPath=${2:-$1}
+
+    if [[ ${!varName} == "" ]]; then
+        loadConfigVar "$varName" "$jsonPath"
+    else
+        ldebug "var not empty: ${!varName}"
+    fi
+}
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Controllers
@@ -187,7 +206,7 @@ _main() {
 
 	# setting defaults from config file
 	# if [ -f "$configFile" ]; then
-	# 	[[ $var == "" ]] && var="$(jq -r '.var' "$configFile")"
+	# 	loadDefaultConfigVar var
 	# 	[[ ${#vars[@]} == 0 ]] && readarray -t vars <<<"$(jq -r '.vars[]' "$configFile")"
 	# else
 	# 	ldebug "config file not found"
