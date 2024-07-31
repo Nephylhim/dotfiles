@@ -83,9 +83,9 @@
             "background": "#fe4f4f"
         },
     },
+    "tabnine.experimentalAutoImports": true,
     "go.installDependenciesWhenBuilding": false,
     // "go.gocodeAutoBuild": true,
-    "tabnine.experimentalAutoImports": true,
     "go.addTags": {
         "transform": "camelcase"
     },
@@ -168,7 +168,8 @@
         "editor.scrollbar.verticalScrollbarSize": 0,
         "workbench.activityBar.visible": false,
         "workbench.statusBar.visible": false,
-        "workbench.colorTheme": "GitHub Light High Contrast",
+        // "workbench.colorTheme": "GitHub Light High Contrast",
+        "workbench.colorTheme": "Bearded Theme Milkshake Mint",
         // "workbench.colorCustomizations": {
         //     "[GitHub Dark Default]": {
         //         "activityBar.background": "#000",

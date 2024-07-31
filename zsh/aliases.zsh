@@ -147,5 +147,5 @@ alias sshrc="$EDITOR ~/.ssh/config"
 alias kh='kitten ssh'
 alias cx='chmod u+x'
 alias llfi='exa -s date -r | head -n1 | xargs -I{} -- sudo dpkg -i {}'
-alias dli="exa -s date -r ~/Downloads | head -n1 | xargs -I{} -- sudo dpkg -i {}"
+alias dli="exa -s date -r ~/Downloads | head -n1 | xargs -I{} -- sudo dpkg -i ~/Downloads/{}"
 alias llfmv='exa -s date -r | head -n1 | xargs -I{} -- mv {}'
