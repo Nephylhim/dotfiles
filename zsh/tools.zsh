@@ -45,3 +45,15 @@ fi
 
 # ctrl+backspace > delete word
 bindkey '^H' backward-delete-word
+
+# For Loading the SSH key
+if command -v keychain &>/dev/null; then
+    if [ -f $HOME/.ssh/id_ed25519 ]; then
+	keychain -q --nogui $HOME/.ssh/id_ed25519
+    fi
+    if [ -f $HOME/.ssh/perso_ed25519 ]; then
+	keychain -q --nogui $HOME/.ssh/perso_ed25519
+    fi
+    source $HOME/.keychain/$(hostname)-sh
+fi
+
