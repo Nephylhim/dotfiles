@@ -60,7 +60,7 @@ error_symbol = "[➜](bold red)"
 [custom.remote_conn]
 description = "show when some remote connexions are present"
 command = "who | grep -vc ':1'"
-when = "who | grep -vc ':1' | xargs -I{} -- test {} -gt 0"
+when = "who | grep -vcE '(pts/1|:1)' | xargs -I{} -- test {} -gt 0"
 symbol = "🌐"
 format = '\[[$symbol$output]($style)\]'
 style = "red"

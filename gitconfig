@@ -37,7 +37,7 @@
 [delta]
     number = true
     dark = true
-    side-by-side = true
+    ; side-by-side = true
     navigate = true
     #hyperlinks = true
 

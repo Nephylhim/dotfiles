@@ -59,6 +59,19 @@ loadDefaultConfigVar() {
     fi
 }
 
+loadEnvFile() {
+	# shellcheck source=/dev/null # => no lint for this file source
+	source "$envFile"
+}
+
+# $1: variableName (send the var name as string, not the variable itself)
+# $2: defaultEnvName (send the env name as string, not the env itself)
+loadDefaultEnv() {
+	variableName=$1
+	defaultEnvName=$2
+	[ -n "${!defaultEnvName+x}" ] && typeset "$variableName"="${!variableName:=${!defaultEnvName}}"
+}
+
 # ────────────────────────────────────────────────────────────────────────────────
 # Controllers
 

@@ -31,9 +31,15 @@ function glmr-old() {
 }
 
 function glmr() {
-	fzf \
+	# fzf \
+	# 	--no-sort \
+	# 	-c 'glab mr list -P 1000' \
+	# 	--header-lines=2 \
+	# 	--header='alt-d: diff | alt-c: checkout | alt-v: view w/ comments | alt-a: approve MR | ctrl-p: toggle preview' \
+	# 	--bind 'alt-d:execute(glab mr diff {1} | delta),alt-c:execute(glab mr checkout {1}),alt-v:execute(glab mr view --comments --system-logs -P 1000 {1}),alt-a:execute(glab mr approve {1}),ctrl-p:toggle-preview' \
+	# 	--preview 'script /dev/null -qfec "PAGER=''; glab mr view {1}"' \
+	glab mr list -P 1000 | fzf \
 		--no-sort \
-		-c 'glab mr list -P 1000' \
 		--header-lines=2 \
 		--header='alt-d: diff | alt-c: checkout | alt-v: view w/ comments | alt-a: approve MR | ctrl-p: toggle preview' \
 		--bind 'alt-d:execute(glab mr diff {1} | delta),alt-c:execute(glab mr checkout {1}),alt-v:execute(glab mr view --comments --system-logs -P 1000 {1}),alt-a:execute(glab mr approve {1}),ctrl-p:toggle-preview' \
@@ -75,7 +81,7 @@ function createDesktopEntry() {
 		    Categories=Application;
 	EOM
 
-	$EDITOR $path
+	$EDITOR "$path"
 	return 0
 }
 
@@ -85,3 +91,38 @@ function renameKittyWindow() {
 }
 alias rename='renameKittyWindow'
 alias ren='renameKittyWindow'
+
+function newuserservice() {
+		mkdir -p ~/.config/systemd/user
+		help="Usage:\n $0 <serviceName>"
+		if [[ $# == 0 ]]; then
+				echo -e >2 "need 1 argument. $help\nexiting..."
+				return 1
+		fi
+
+		name=$1
+		p="$HOME"/.config/systemd/user/"$name".service
+		if [[ -f "$p" ]]; then
+				echo -e "service entry $p already exists. $help\nexiting..."
+				return 1
+		fi
+
+		echo "creating entry"
+
+\cat >"$p" <<-EOM
+		[Unit]
+		Description=
+		#alt After: network.target
+		After=network-online.target
+
+		[Service]
+		ExecStart=
+		#alt Restart: on-failure / always
+		Restart=always
+
+		[Install]
+		WantedBy=multi-user.target
+EOM
+		${EDITOR:=vim} "$p"
+		systemctl --user daemon-reload
+}

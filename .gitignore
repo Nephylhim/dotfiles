@@ -1,2 +1,5 @@
 vim/.netrwhist
-
+vim/backup/
+vim/backup/*
+vim/colors/
+vim/plugged/
