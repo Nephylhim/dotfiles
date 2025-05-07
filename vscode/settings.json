@@ -1,6 +1,5 @@
 {
     "workbench.colorTheme": "Bearded Theme Arc EolStorm",
-    "workbench.iconTheme": "simple-icons",
     "files.autoSave": "onFocusChange",
     "editor.tabCompletion": "on",
     "window.menuBarVisibility": "toggle",
@@ -11,7 +10,7 @@
     },
     "emmet.showExpandedAbbreviation": "always",
     "files.insertFinalNewline": true,
-    "editor.fontSize": 12,
+    "editor.fontSize": 11,
     "extensions.ignoreRecommendations": false,
     // "go.useCodeSnippetsOnFunctionSuggest": true,
     // "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
@@ -43,8 +42,8 @@
     },
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown-preview-enhanced.mermaidTheme": "default",
-    "gitlens.mode.active": "review",
-    "terminal.integrated.fontFamily": "DroidSansMono Nerd Font, Book",
+    "gitlens.mode.active": "zen",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "markdown.extension.italic.indicator": "_",
     "markdown.extension.list.indentationSize": "inherit",
     "editor.formatOnSave": true,
@@ -60,7 +59,7 @@
     // "eslint.packageManager": "yarn",
     "zenMode.hideLineNumbers": false,
     "todo-tree.tree.showScanModeButton": false,
-    "editor.acceptSuggestionOnEnter": "off",
+    // "editor.acceptSuggestionOnEnter": "off",
     "shellcheck.enableQuickFix": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
@@ -94,9 +93,9 @@
         // "build.buildFlags": [
         //     "-tags"
         // ],
-        "build.allowModfileModifications": true,
+        // "build.allowModfileModifications": true,
         // "formatting.gofumpt": true,
-        "formatting.local": "diateam.net"
+        "formatting.local": "renault.com"
     },
     "go.toolsManagement.autoUpdate": true,
     "go.formatTool": "goimports",
@@ -128,9 +127,8 @@
     ],
     "liveshare.guestApprovalRequired": true,
     "puppet.editorService.enable": false,
-    "gitlab.ignoreCertificateErrors": true,
-    "gitlab.ca": "/etc/ssl/certs/b1a6a685.1",
-    "gitlab.cert": "/etc/ssl/certs/b1a6a685.1",
+    "gitlab.ca": "",
+    "gitlab.cert": "",
     // "prettier.configPath": ".eslint",
     "gitlab.remoteName": "origin",
     "gitlab.pipelineGitRemoteName": "origin",
@@ -193,5 +191,18 @@
         //     }
         // },
         // "window.zoomLevel": 2
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": false,
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.startupEditor": "none",
+    "liveshare.diagnosticLogging": true,
+    "liveshare.diagnosticMode": true,
+    "liveshare.launcherClient": "visualStudioCode",
+    "go.editorContextMenuCommands": {
+        "fillStruct": true
     }
 }
