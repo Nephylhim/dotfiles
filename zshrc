@@ -38,7 +38,7 @@ ZSH_COLORIZE_STYLE="fruity"
 zstyle ':omz:plugins:nvm' lazy true
 #NVM_AUTOLOAD=1
 
-plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm zoxide starship ssh)
+plugins=(git git-auto-fetch gitfast common-aliases zsh-autosuggestions colored-man-pages command-not-found dircycle sudo nvm zoxide starship ssh direnv)
 if test -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting; then
     plugins+=(zsh-syntax-highlighting)
 fi

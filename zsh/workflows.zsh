@@ -85,6 +85,46 @@ function createDesktopEntry() {
 	return 0
 }
 
+function mySSHGithub(){
+		# If already configured, return
+		if grep -q '^Host githubp$' ~/.ssh/config; then
+				return
+		fi
+
+		# else, add a personnal github host to ssh config
+		cat >>~/.ssh/config <<- EOM
+				
+				# Other github account: personnal
+				Host githubp
+					 HostName github.com
+					 IdentityFile ~/.ssh/perso_ed25519
+					 IdentitiesOnly yes
+		EOM
+}
+
+function mygithub(){
+		git config --local user.email 'thomas.coussot@laposte.net'
+		fURL="$(git remote show -n origin |grep 'Fetch *URL' |cut -d: -f2- |tr -d ' ')"
+		pURL="$(git remote show -n origin |grep 'Push *URL' |cut -d: -f2- |tr -d ' ')"
+		nfu="$(sed -E 's|git@github.com|git@githubp|'<<<"$fURL")"
+		npu="$(sed -E 's|git@github.com|git@githubp|'<<<"$pURL")"
+		echo "fetch=$fURL   newFetch=$nfu"
+		echo " push=$pURL    newPush=$npu"
+		git remote set-url origin "$nfu"
+		git remote set-url --push origin "$npu"
+
+		# Ensure githubp host is in ssh config
+		mySSHGithub
+}
+
+if command -v explorer.exe >/dev/null; then
+		function explorer(){
+				p="${1:=.}"
+				wp="$(wslpath -w $p)"
+				explorer.exe "$wp"
+		}
+fi
+
 function renameKittyWindow() {
     name=${1:=$(basename $PWD)}
     kitty @ set-tab-title $name

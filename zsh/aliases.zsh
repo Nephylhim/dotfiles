@@ -53,11 +53,11 @@ alias stop='sudo systemctl stop'
 alias restart='sudo systemctl restart'
 alias s='sudo systemctl'
 
-alias ll='exa -laF --git'
-alias l='exa -lF --git --color=always'
-alias lt='exa -TlF --git'
-alias lf='exa -lF --git --color=always -s date -r | head -n10' # last 10 files
-alias llf='exa -s date -r | head -n1'
+alias ll='eza -laF --git'
+alias l='eza -lF --git --color=always'
+alias lt='eza -TlF --git'
+alias lf='eza -lF --git --color=always -s date -r | head -n10' # last 10 files
+alias llf='eza -s date -r | head -n1'
 
 alias t2='tree -L 2'
 alias t3='tree -L 3'
@@ -108,7 +108,8 @@ alias b='bat'
 alias cat='bat -p'
 alias gd='git delta'
 alias glg='git lg'
-alias rm='echo "use rip!"; rip'
+alias gitlocal='git config --local user.email "thomas.coussot@laposte.net"'
+# alias rm='echo "use rip!"; rip'
 alias truerm='/bin/rm'
 
 alias resource='clear; exec zsh'
@@ -146,6 +147,7 @@ alias sshx='ssh -X'
 alias sshrc="$EDITOR ~/.ssh/config"
 alias kh='kitten ssh'
 alias cx='chmod u+x'
-alias llfi='exa -s date -r | head -n1 | xargs -I{} -- sudo dpkg -i {}'
-alias dli="exa -s date -r ~/Downloads | head -n1 | xargs -I{} -- sudo dpkg -i ~/Downloads/{}"
-alias llfmv='exa -s date -r | head -n1 | xargs -I{} -- mv {}'
+alias llfi='eza -s date -r | head -n1 | xargs -I{} -- sudo dpkg -i {}'
+alias dli="eza -s date -r ~/Downloads | head -n1 | xargs -I{} -- sudo dpkg -i ~/Downloads/{}"
+alias llfmv='eza -s date -r | head -n1 | xargs -I{} -- mv {}'
+alias wsl='wsl.exe'
