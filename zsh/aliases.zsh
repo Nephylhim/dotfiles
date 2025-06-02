@@ -118,6 +118,7 @@ alias zshrc="$EDITOR ~/.zshrc; clear; exec zsh"
 alias aliasrc="$EDITOR ~/.dotfiles/zsh/aliases.zsh; exec zsh"
 alias gitconfig="$EDITOR ~/.config/git/config"
 alias gitrc="$EDITOR ~/.config/git/config"
+alias workrc="$EDITOR ~/.oh-my-zsh/custom/work.zsh; exec zsh"
 alias c='code .'
 #alias cg='code -rg'
 function cg(){code -rg "$(sed -r 's|:$||'<<<"$1")"}

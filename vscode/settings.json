@@ -204,5 +204,7 @@
     "liveshare.launcherClient": "visualStudioCode",
     "go.editorContextMenuCommands": {
         "fillStruct": true
-    }
+    },
+    "java.format.settings.profile": "GoogleStyle",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
 }

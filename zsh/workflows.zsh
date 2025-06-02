@@ -166,3 +166,16 @@ EOM
 		${EDITOR:=vim} "$p"
 		systemctl --user daemon-reload
 }
+
+function syncWSLDotfiles() {
+		DOTDIR="$HOME/.dotfiles"
+		# verify no git updates to not override changes
+		cd ~/.dotfiles
+		if ! git diff --quiet; then
+				echo "some dotfiles have uncommited changes, commit or stash to avoid losses"
+				return 1
+		fi
+
+		cp -f "$(wslpath $(wslvar USERPROFILE))"/AppData/Roaming/Code/User/settings.json $DOTDIR/vscode/
+		cp -f "$(wslpath $(wslvar USERPROFILE))"/AppData/Roaming/Code/User/keybindings.json $DOTDIR/vscode/
+}
