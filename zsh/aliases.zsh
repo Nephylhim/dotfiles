@@ -104,13 +104,12 @@ command -v scrcpy >/dev/null && alias scm='scrcpy -S --disable-screensaver -w -m
 
 alias fd='/usr/bin/fdfind'
 alias calc='eva'
-alias b='bat'
-alias cat='bat -p'
+alias b='bat -p'
+# alias cat='bat -p'
 alias gd='git delta'
 alias glg='git lg'
 alias gitlocal='git config --local user.email "thomas.coussot@laposte.net"'
 # alias rm='echo "use rip!"; rip'
-alias truerm='/bin/rm'
 
 alias resource='clear; exec zsh'
 alias rrsc='clear; exec zsh'
@@ -152,3 +151,4 @@ alias llfi='eza -s date -r | head -n1 | xargs -I{} -- sudo dpkg -i {}'
 alias dli="eza -s date -r ~/Downloads | head -n1 | xargs -I{} -- sudo dpkg -i ~/Downloads/{}"
 alias llfmv='eza -s date -r | head -n1 | xargs -I{} -- mv {}'
 alias wsl='wsl.exe'
+alias winget='winget.exe'

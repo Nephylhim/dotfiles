@@ -117,12 +117,22 @@ function mygithub(){
 		mySSHGithub
 }
 
+# Means we're on WSL
 if command -v explorer.exe >/dev/null; then
 		function explorer(){
 				p="${1:=.}"
 				wp="$(wslpath -w $p)"
 				explorer.exe "$wp"
 		}
+
+		function intellij(){
+				p="${1:=.}"
+				wp="$(wslpath -w $p)"
+				ij="$(wslpath "$(wslvar LOCALAPPDATA)\Programs\IntelliJ IDEA Ultimate\bin"/idea64.exe)"
+				"$ij" "$wp" >/dev/null 2>&1 &
+				disown
+		}
+		alias ij='intellij'
 fi
 
 function renameKittyWindow() {

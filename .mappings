@@ -7,6 +7,7 @@ zshrc = "~/.zshrc"
 "zsh/go.zsh" = "~/.oh-my-zsh/custom/go.zsh"
 "zsh/motd.zsh" = "~/.oh-my-zsh/custom/motd.zsh"
 "zsh/workflows.zsh" = "~/.oh-my-zsh/custom/workflows.zsh"
+"zsh/git-worktree.zsh" = "~/.oh-my-zsh/custom/git-worktree.zsh"
 
 "starship.toml" = "~/.config/starship.toml"
 
