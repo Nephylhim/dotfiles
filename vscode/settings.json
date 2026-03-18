@@ -42,7 +42,6 @@
     },
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown-preview-enhanced.mermaidTheme": "default",
-    "gitlens.mode.active": "zen",
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "markdown.extension.italic.indicator": "_",
     "markdown.extension.list.indentationSize": "inherit",
@@ -97,6 +96,9 @@
         // "formatting.gofumpt": true,
         "formatting.local": "renault.com"
     },
+    "go.languageServerFlags": [
+        "-mcp.listen=localhost:8092",
+    ],
     "go.toolsManagement.autoUpdate": true,
     "go.formatTool": "goimports",
     "go.lintTool": "golangci-lint",
@@ -207,4 +209,69 @@
     },
     "java.format.settings.profile": "GoogleStyle",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.mcp.autostart": "newAndOutdated",
+    "chat.mcp.gallery.enabled": true,
+    "chat.tools.terminal.autoApprove": {
+        // auto approved
+        "git branch --show-current": true,
+        "git status": true,
+        "git diff": true,
+        "git log": true,
+        "git remote -v": true,
+        "head": true,
+        "tail": true,
+        "cd": true,
+        "ls": true,
+        "bru": true,
+        "grep": true,
+        "sort": true,
+        "cut": true,
+        "awk": true,
+        "sed": true,
+        "uniq": true,
+        "jq": true,
+        "sleep": true,
+        "curl -s http://localhost": true,
+        "/curl -s [\"']?http:\/\/localhost/": true,
+        "/curl (-X [A-Z]+ ?)?(-s)? *[\"']?http:\/\/localhost/": true,
+        "PGPASSWORD=": true,
+        "psql -h localhost": true,
+        "/PGPASSWORD=(.+) psql -h localhost/i": true,
+        "/PGPASSWORD=(.+) psql/i": true,
+        "psql": true, // TODO: change me
+        "bash test-eligibility.sh": true, // FIXME: tmp, delete me
+        "./gradlew": true,
+        "npm install": true,
+        "npm run": true,
+        "node": true,
+        // require approval
+        "rm": false,
+        "curl": false,
+        "wget": false,
+        "eval": false,
+        // "echo": false, // oftenly used to redirect outputs to files (ex: echo "data" > file.txt)
+    },
+    "chat.agent.maxRequests": 250,
+    "chat.tools.urls.autoApprove": {
+        "https://docs.usebruno.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "chat.tools.terminal.enableAutoApprove": true,
+    "remote.autoForwardPortsSource": "hybrid",
 }

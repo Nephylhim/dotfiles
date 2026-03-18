@@ -43,6 +43,32 @@ if command -v atuin &>/dev/null; then
     #bindkey '^[OA' _atuin_search_widget
 fi
 
+# GitHub Copilot CLI - auto-approve safe commands
+alias copilot='copilot \
+  --allow-tool "shell(git branch --show-curent)" \
+  --allow-tool "shell(git status)" \
+  --allow-tool "shell(git diff:*)" \
+  --allow-tool "shell(git log:*)" \
+  --allow-tool "shell(git remote -v:*)" \
+  --allow-tool "shell(head:*)" \
+  --allow-tool "shell(tail:*)" \
+  --allow-tool "shell(cd:*)" \
+  --allow-tool "shell(ls:*)" \
+  --allow-tool "shell(bru:*)" \
+  --allow-tool "shell(grep:*)" \
+  --allow-tool "shell(sort:*)" \
+  --allow-tool "shell(cut:*)" \
+  --allow-tool "shell(awk:*)" \
+  --allow-tool "shell(sed:*)" \
+  --allow-tool "shell(uniq:*)" \
+  --allow-tool "shell(jq:*)" \
+  --allow-tool "shell(sleep:*)" \
+  --allow-tool "shell(psql -h localhost:*)" \
+  --allow-tool "shell(./gradlew:*)" \
+  --allow-tool "shell(npm run:*)" \
+  --allow-tool "write" \
+  --allow-url "http://localhost"'
+
 # ctrl+backspace > delete word
 bindkey '^H' backward-delete-word
 
