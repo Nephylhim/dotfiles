@@ -97,7 +97,7 @@ alias skf="rg --files | sk --preview 'bat {} --color=always'"
 alias skl="sk --ansi --delimiter ':' -i -c 'rg --color=always --line-number "'"{}"'"' --preview 'bat --pager=never -r "'"$(echo "$(bc <<< {2}-15)\n1" | sort -nr | head -n1):"'" -H {2} --color=always --number {1}'"
 alias preview='sk --preview="bat {} --color=always"'
 
-alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | tac | sk) --no-sandbox'
+# alias obsidian='eval ~/opt/$(\ls -1 ~/opt/Obsidian* | xargs -L1 basename | tac | sk) --no-sandbox'
 command -v scrcpy >/dev/null && alias sc='scrcpy -S --disable-screensaver -m 800 -w'
 command -v scrcpy >/dev/null && alias scm='scrcpy -S --disable-screensaver -w -m'
 [ -f $HOME/.local/share/applications/scrcpy.desktop ] && alias sce="$EDITOR $HOME/.local/share/applications/scrcpy.desktop"
